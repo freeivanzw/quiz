@@ -1,4 +1,7 @@
-@import "./variables.scss";
-@import "./base.scss";
-@import "./reset.scss";
+@import "_variables";
+@import "_reset";
+@import "_base";
+@import "components/_header";
+@import "components/_footer";
+@import "components/_quiz-list";
 

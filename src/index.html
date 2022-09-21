@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
+    <title>You-quiz</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/adaptive.css">
 </head>
@@ -12,18 +12,70 @@
     <!--HEADER SITE-->
     <header class="header_site">
         <a href="#" class="header_logo">
-            <img src="./images/header-logo.jpg" alt="header_logo">
+            <img src="./images/logo.svg" alt="header_logo">
         </a>
         <a href="#" class="user_btn"><svg class="icon"><use xlink:href="./images/sprite.svg#user"></use></svg></a>
+        <div class="header_menu">
+            <div class="toggle_language">
+                <a href="#" class="active">UA</a>
+                <a href="#">EN</a>
+            </div>
+            <ul class="menu_list">
+                <li><a href="#">test test</a></li>
+                <li><a href="#">test test</a></li>
+                <li><a href="#">test test</a></li>
+                <li><a href="#">test test</a></li>
+            </ul>
+            <div class="social_list">
+                <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#facebook"></use></svg></a>
+                <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#instagram"></use></svg></a>
+            </div>
+            <a href="#" class="logout"><svg class="icon"><use xlink:href="./images/sprite.svg#logout"></use></svg>Вийти</a>
+        </div>
     </header>
     <main>
+        <!--QUIZ LIST-->
+        <section class="quiz_list">
+            <a href="#" class="btn quiz_list-add">Створити<svg class="icon"><use xlink:href="./images/sprite.svg#plus"></use></svg></a>
+            <ul>
+                <li>
+                    <span class="box_title">Назва тесту</span>
+                    <div class="quiz_list-link">
+                        <a href="#" class="to_quiz" target="_blank">testquiz.com.ua</a><a href="#" class="copy_quiz"><svg class="icon"><use xlink:href="./images/sprite.svg#copy_link"></use></svg></a>
+                    </div>
+                    <div class="quiz_list-bottom">
+                        <div class="quiz_list-btns">
+                            <a href="#" class="btn"><span>Заявки</span><svg class="icon"><use xlink:href="./images/sprite.svg#list"></use></svg></a>
+                            <a href="#" class="btn"><span>Редагувати</span><svg class="icon"><use xlink:href="./images/sprite.svg#edit"></use></svg></a>
+                            <a href="#" class="btn"><svg class="icon"><use xlink:href="./images/sprite.svg#statistics"></use></svg></a>
+                        </div>
+                        <a href="#" class="quiz_list-more"><svg class="icon"><use xlink:href="./images/sprite.svg#more"></use></svg></a>
+                    </div>
+                    <div class="quiz_list-control">
+                        <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#copy"></use></svg>Зробити копію</a>
+                        <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#trash"></use></svg>Видалити</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
+
+        <div class="shadow hidden">close</div>
     </main>
     <!--FOOTER SITE-->
     <footer class="footer_site">
-
+        <div class="bottom_info">
+            <span class="copyright">© Copyright - <a href="">Dymolux.com.ua</a> 2013 - 2022</span>
+            <span class="confident">
+                <a href="https://websufix.com/e-commerce">Створення інтернет магазину</a>
+                <a href="https://websufix.com">веб студія</a> SUFIX
+            </span>
+        </div>
+        <ul class="footer_email">
+            <li><a href="mailto:test@gmail.com"><svg class="icon"><use xlink:href="./images/sprite.svg#email"></use></svg>test@gmail.com</a></li>
+        </ul>
     </footer>
-    <div class="styleguide" style="display: flex; flex-direction: column;">
+    <div class="styleguide hidden" style="display: flex; flex-direction: column;">
         <h1>hello world</h1>
         <span class="main_title">hello world</span>
         <h2>hello world</h2>
