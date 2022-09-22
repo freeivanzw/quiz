@@ -2,16 +2,23 @@
   /*HEADER SITE*/
   /*FOOTER SITE*/
   /*QUIZ LIST*/
+  /*CABINET*/
 }
 @media only screen and (min-width: 640px) {
+  .popup.login_popup {
+    padding: 30px 60px;
+  }
+
   /*HEADER SITE*/
   /*FOOTER SITE*/
   /*QUIZ LIST*/
+  /*CABINET*/
 }
 @media only screen and (min-width: 768px) {
   /*HEADER SITE*/
   /*FOOTER SITE*/
   /*QUIZ LIST*/
+  /*CABINET*/
 }
 @media only screen and (min-width: 1024px) {
   h1, .main_title {
@@ -44,11 +51,23 @@
     width: 160px;
   }
 
+  .user_btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .user_btn img {
+    width: 40px;
+    height: 40px;
+  }
+
   /*FOOTER SITE*/
   /*QUIZ LIST*/
+  /*CABINET*/
 }
 @media only screen and (min-width: 1280px) {
   /*HEADER SITE*/
   /*FOOTER SITE*/
   /*QUIZ LIST*/
+  /*CABINET*/
 }

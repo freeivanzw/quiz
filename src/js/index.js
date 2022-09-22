@@ -3,16 +3,40 @@ $(function () {
 
     $dark.on('click', function (e) {
         e.preventDefault();
-
         $(this).addClass('hidden');
+    })
+
+    function showPopup(popup) {
+        $('body').addClass('overflow');
+        $('.popup_wrap').removeClass('hidden');
+        $(popup).addClass('active');
+    }
+
+    function hiddenPopup(popup) {
+        $('body').removeClass('overflow');
+        $('.popup_wrap').addClass('hidden');
+        $(popup).removeClass('active')
+    }
+
+    $('.close_popup').on('click', function (e) {
+        e.preventDefault();
+
+        hiddenPopup($(this.closest('.login_popup')))
+    })
+
+    $(document).on('click', function (e) {
+        if($(e.target).hasClass('popup_wrap')) {
+            $('.popup_wrap').addClass('hidden');
+            $('.popup').removeClass('active');
+            $('body').removeClass('overflow');
+        }
     })
 
     $('.user_btn').on('click', function (e) {
         e.preventDefault();
 
         if ($(this).hasClass('login')) {
-            $('body').addClass('overflow');
-            $('.popup_wrap').removeClass('hidden');
+            showPopup('.login_popup')
         } else {
             if ($(this).is('.user_btn-active')){
                 $('.header_menu.menu_opened').removeClass('menu_opened');
@@ -23,7 +47,6 @@ $(function () {
             }
         }
     })
-
 
     $(document).on('click', function (e) {
         if($(e.target).closest('.header_menu.menu_opened').length == 0 && !$(e.target).closest('.user_btn').is('.user_btn-active')) {
@@ -58,5 +81,16 @@ $(function () {
         $(this).closest('li').find('.quiz_list-control').toggleClass('active');
     })
 
+    $('.change_btn').on('click', function (e) {
+        e.preventDefault();
+
+        $(this).parent().addClass('active');
+    })
+
+    $('.close_change').on('click', function (e) {
+        e.preventDefault();
+
+        $(this).closest('.change_setting').prev('.setting_info').removeClass('active');
+    })
 
 })

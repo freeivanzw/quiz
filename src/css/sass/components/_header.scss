@@ -39,6 +39,14 @@
     transition: 0.3s;
 }
 
+.user_btn img {
+    display: block;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
 .user_btn:hover .icon {
     fill: var(--dark)
 }
