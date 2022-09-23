@@ -93,4 +93,18 @@ $(function () {
         $(this).closest('.change_setting').prev('.setting_info').removeClass('active');
     })
 
+    if($(window).width() >= 768) {
+        $('#start').on('click', function (e) {
+            e.preventDefault();
+            $('.start_page').addClass('anim');
+
+            // setTimeout(function () {
+            //     document.location = $('#start').attr('href')
+            // }, 1500)
+        })
+    }
+
+
+
+
 })

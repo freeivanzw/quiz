@@ -3,6 +3,10 @@
     /*FOOTER SITE*/
     /*QUIZ LIST*/
     /*CABINET*/
+
+
+    /*START PAGE*/
+    /*FORM QUIZ*/
 }
 
 @media only screen and (min-width : 640px)  {
@@ -13,6 +17,13 @@
     /*FOOTER SITE*/
     /*QUIZ LIST*/
     /*CABINET*/
+
+
+    /*START PAGE*/
+    /*FORM QUIZ*/
+    .form_item {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media only screen and (min-width : 768px)  {
@@ -20,6 +31,77 @@
     /*FOOTER SITE*/
     /*QUIZ LIST*/
     /*CABINET*/
+
+
+    /*START PAGE*/
+    .start_page {
+        flex-direction: row;
+    }
+
+    .start_page > .col-1 {
+        flex: 1 1 60%;
+        height: auto;
+        min-height: 100%;
+        transition: 1s;
+    }
+    .start_page > .col-2 {
+        flex: 0 1 40%;
+        max-width: 700px;
+        justify-content: center;
+        align-items: flex-start;
+        transition: 1s;
+    }
+
+    .start_page.anim > .col-1 {
+        animation: anim-col-1 1s ease-in 0.3s forwards;
+    }
+
+    .start_page.anim > .col-2 {
+        max-width: unset;
+        animation: anim-col-2 1s ease-in 0.3s forwards;
+    }
+
+    @keyframes anim-col-1 {
+        0% {
+            flex: 1 1 60%;
+        }
+        100% {
+            flex: 0 1 0%;
+        }
+    }
+
+    @keyframes anim-col-2 {
+        0% {
+            flex: 0 1 40%;
+        }
+        100% {
+            flex: 0 1 100%;
+        }
+    }
+
+    .start_page.anim > .col-2 * {
+        transition: 0.3s;
+        opacity: 0;
+    }
+
+    .start_page-text {
+        margin-bottom: 20px;
+    }
+
+    .start_page > .col-2 .btn {
+        margin: 0;
+        width: auto;
+    }
+
+    .start_page-bottom {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .start_page-bottom .confident {
+        text-align: end;
+    }
+    /*FORM QUIZ*/
 }
 
 @media only screen and (min-width : 1024px) {
@@ -65,6 +147,10 @@
     /*FOOTER SITE*/
     /*QUIZ LIST*/
     /*CABINET*/
+
+
+    /*START PAGE*/
+    /*FORM QUIZ*/
 }
 
 @media only screen and (min-width : 1280px) {
@@ -72,4 +158,8 @@
     /*FOOTER SITE*/
     /*QUIZ LIST*/
     /*CABINET*/
+
+
+    /*START PAGE*/
+    /*FORM QUIZ*/
 }

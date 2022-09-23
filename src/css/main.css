@@ -10,9 +10,9 @@
   --grey: #e3e3e3;
   --site-bg: #1e1e3e;
   --site-bg-contrast: #ffffff;
-  --text-color: #ffffff;
+  --text-color: #2e2e54;
   --text-color-light: #69748c;
-  --text-color-contrast: #2e2e54;
+  --text-color-contrast: #ffff;
   --link-color: #d13980;
   --link-color-active: #bc3373;
   --border-color: #d2d4d8;
@@ -227,7 +227,7 @@ a:active {
 }
 
 .btn.btn_fill {
-  color: var(--text-color);
+  color: var(--text-color-contrast);
   background-color: var(--primary);
   border-color: var(--primary);
 }
@@ -305,7 +305,7 @@ a:active {
 }
 
 .popup {
-  color: var(--text-color-contrast);
+  color: var(--text-color);
   width: calc(100% - 30px);
   max-width: 500px;
   background-color: var(--site-bg-contrast);
@@ -388,7 +388,6 @@ a:active {
 
 /*header*/
 .header_site {
-  color: var(--text-color-contrast);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -551,7 +550,6 @@ a:active {
 /*FOOTER SITE*/
 .footer_site {
   background-color: var(--site-bg-contrast);
-  color: var(--text-color-contrast);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -620,7 +618,6 @@ a:active {
 }
 
 .quiz_list > ul > li {
-  color: var(--text-color-contrast);
   display: flex;
   flex-direction: column;
   padding: 16px 20px;
@@ -645,7 +642,7 @@ a:active {
   text-overflow: ellipsis;
   white-space: nowrap;
   text-decoration: none;
-  color: var(--text-color-contrast);
+  color: var(--text-color);
   transition: 0.3s;
 }
 
@@ -663,7 +660,7 @@ a:active {
 }
 
 .copy_quiz .icon {
-  fill: var(--text-color-contrast);
+  fill: var(--text-color);
   transition: 0.3s;
 }
 
@@ -691,7 +688,7 @@ a:active {
 }
 
 .quiz_list-btns .btn .icon {
-  fill: var(--text-color-contrast);
+  fill: var(--text-color);
 }
 
 .quiz_list-btns .btn span + .icon {
@@ -708,7 +705,7 @@ a:active {
 }
 
 .quiz_list-more .icon {
-  fill: var(--text-color-contrast);
+  fill: var(--text-color);
   opacity: 0.7;
   transition: 0.3s;
 }
@@ -744,7 +741,7 @@ a:active {
 }
 
 .quiz_list-control a .icon {
-  fill: var(--text-color-contrast);
+  fill: var(--text-color);
   transition: 0.3s;
   margin-right: 8px;
 }
@@ -763,7 +760,6 @@ a:active {
 }
 
 .cabinet .centre {
-  color: var(--text-color-contrast);
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -857,9 +853,17 @@ a:active {
   fill: var(--danger);
 }
 
+.change_photo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 .change_photo .photo {
   width: 50px;
   height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
 .change_photo .photo img {
@@ -867,4 +871,259 @@ a:active {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.upload_photo {
+  margin-left: 12px;
+}
+
+/*START PAGE*/
+.start_page {
+  background-color: var(--site-bg-contrast);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.start_page > .col-1 {
+  flex: 0 1 auto;
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+}
+
+.start_page > .col-2 {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 32px 100px 32px;
+  position: relative;
+}
+
+.start_page-text {
+  margin-bottom: 12px;
+}
+
+.start_page > .col-2 .btn {
+  max-width: 300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.start_page-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 100px;
+  padding: 16px 32px;
+}
+
+.start_page-bottom ul a {
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.start_page-bottom ul a:hover {
+  text-decoration: underline;
+  color: var(--link-color-active);
+}
+
+.start_page-bottom .confident {
+  text-align: center;
+}
+
+.start_page-bottom .confident a {
+  color: var(--text-color);
+}
+
+/*FORM QUIZ*/
+.form_quiz {
+  padding: 30px 10px 50px 10px;
+}
+
+.form_quiz .centre {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 15px;
+  width: 100%;
+  max-width: 640px;
+  background-color: var(--site-bg-contrast);
+  border-radius: 5px;
+}
+
+.form_item {
+  display: none;
+  grid-template-columns: 1fr;
+  grid-gap: 15px;
+  margin-bottom: 30px;
+}
+
+.form_item.active {
+  display: grid;
+}
+
+.checkbox_wrap {
+  position: relative;
+}
+
+.checkbox_wrap input[type=checkbox],
+.checkbox_wrap input[type=radio] {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+}
+
+.checkbox_wrap span {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  padding: 10px 20px 10px 50px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkbox_wrap span::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+
+.checkbox_wrap input:checked + span {
+  border-color: var(--primary);
+}
+
+.checkbox_wrap input:checked + span::before {
+  background-color: var(--primary);
+}
+
+.text_wrap {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  position: relative;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.text_wrap input[type=checkbox] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.checkbox_block {
+  height: 50px;
+  width: 50px;
+  position: relative;
+}
+
+.checkbox_block::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+
+.text_wrap label input:checked + .checkbox_block::before {
+  background-color: var(--primary);
+}
+
+.text_wrap input[type=text] {
+  height: 100%;
+  flex: 1 1 auto;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  border-left: 1px solid var(--border-color);
+}
+
+.quiz_panel {
+  display: flex;
+  align-items: center;
+}
+
+.quiz_progress-wrap {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.quiz_progress {
+  width: 100%;
+  height: 8px;
+  position: relative;
+  background-color: var(--grey);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.quiz_progress b {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--success);
+}
+
+.quiz_progress-wrap > span {
+  margin-bottom: 5px;
+}
+
+.quiz_progress-wrap > span b {
+  font-weight: 400;
+  color: var(--primary);
+}
+
+.prev_quiz {
+  transform: rotate(180deg);
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 21px;
+}
+
+.prev_quiz .icon {
+  fill: var(--text-color-light);
+}
+
+.prev_next {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 21px;
+  border: 1px solid var(--primary);
+}
+
+.prev_next .icon {
+  margin-left: 5px;
 }

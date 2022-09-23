@@ -1,0 +1,186 @@
+/*FORM QUIZ*/
+
+.form_quiz {
+    padding: 30px 10px 50px 10px;
+}
+
+.form_quiz .centre {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 15px;
+    width: 100%;
+    max-width: 640px;
+    background-color: var(--site-bg-contrast);
+    border-radius: 5px;
+}
+
+.form_item {
+    display: none;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+    margin-bottom: 30px;
+}
+
+.form_item.active {
+    display: grid;
+}
+
+.checkbox_wrap {
+    position: relative;
+}
+
+.checkbox_wrap input[type=checkbox],
+.checkbox_wrap input[type=radio] {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+}
+
+.checkbox_wrap span {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    padding: 10px 20px 10px 50px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    cursor: pointer
+}
+
+.checkbox_wrap span::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    transition: 0.3s
+}
+
+.checkbox_wrap input:checked + span {
+    border-color: var(--primary)
+}
+
+.checkbox_wrap input:checked + span::before {
+    background-color: var(--primary);
+}
+
+.text_wrap {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    position: relative;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.text_wrap input[type=checkbox] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.checkbox_block {
+    height: 50px;
+    width: 50px;
+    position: relative;
+}
+
+.checkbox_block::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s
+}
+
+.text_wrap label input:checked + .checkbox_block::before {
+    background-color: var(--primary);
+}
+
+.text_wrap input[type=text] {
+    height: 100%;
+    flex: 1 1 auto;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    border-left: 1px solid var(--border-color);
+}
+
+.quiz_panel {
+    display: flex;
+    align-items: center;
+}
+
+.quiz_progress-wrap {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.quiz_progress {
+    width: 100%;
+    height: 8px;
+    position: relative;
+    background-color: var(--grey);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.quiz_progress b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--success);
+}
+
+.quiz_progress-wrap > span {
+    margin-bottom: 5px;
+}
+
+.quiz_progress-wrap > span b {
+    font-weight: 400;
+    color: var(--primary);
+}
+
+.prev_quiz {
+    transform: rotate(180deg);
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 21px;
+}
+
+.prev_quiz .icon {
+    fill: var(--text-color-light);
+}
+
+.prev_next {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 21px;
+    border: 1px solid var(--primary)
+}
+
+.prev_next .icon {
+    margin-left: 5px;
+}
