@@ -1,0 +1,74 @@
+/*RESUL*/
+
+.resul {
+    padding: 30px 0 50px 0;
+}
+
+.resul .centre {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--site-bg-contrast);
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 640px;
+    border-radius: 5px;
+}
+
+.resul .total {
+    font-weight: 400;
+}
+
+.resul .total b {
+    margin-left: 5px;
+    color: var(--primary)
+}
+
+.share_quiz {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.duel {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 25px;
+}
+
+.duel .user {
+    font-size: 16px;
+    padding: 5px;
+}
+
+.duel .user b {
+    color: var(--primary);
+}
+
+.winners {
+    margin-bottom: 25px;
+}
+
+.winners li {
+    font-size: 16px;
+}
+
+.winners li + li {
+    margin-top: 5px;
+}
+
+.winners li b {
+    color: var(--primary)
+}
+
+.donate_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.donate_box + .donate_box {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border-color);
+}

@@ -15,6 +15,16 @@
     border-radius: 5px;
 }
 
+.form_quiz-text {
+    color: var(--text-color-contrast);
+    display: block;
+    width: max-content;
+    margin-bottom: 10px;
+    background-color: var(--primary);
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
 .form_item {
     display: none;
     grid-template-columns: 1fr;
@@ -72,6 +82,10 @@
     background-color: var(--primary);
 }
 
+.checkbox_wrap input[type=checkbox] + span::before {
+    border-radius: 4px;
+}
+
 .text_wrap {
     display: flex;
     align-items: center;
@@ -95,6 +109,7 @@
     height: 50px;
     width: 50px;
     position: relative;
+    cursor: pointer;
 }
 
 .checkbox_block::before {
@@ -166,10 +181,21 @@
     margin-right: 10px;
     border: 1px solid var(--border-color);
     border-radius: 21px;
+    transition: 0.3s;
+}
+
+.prev_quiz:hover {
+    border-color: var(--text-color-light);
+    background-color: var(--text-color-light);
 }
 
 .prev_quiz .icon {
     fill: var(--text-color-light);
+    transition: 0.3s;
+}
+
+.prev_quiz:hover .icon {
+    fill: var(--text-color-contrast);
 }
 
 .prev_next {
@@ -178,9 +204,20 @@
     align-items: center;
     padding: 10px;
     border-radius: 21px;
-    border: 1px solid var(--primary)
+    border: 1px solid var(--primary);
+    transition: 0.3s;
+}
+
+.prev_next:hover {
+    color: var(--text-color-contrast);
+    background-color: var(--primary);
 }
 
 .prev_next .icon {
     margin-left: 5px;
+    transition: 0.3s;
+}
+
+.prev_next:hover .icon {
+    fill: var(--text-color-contrast);
 }

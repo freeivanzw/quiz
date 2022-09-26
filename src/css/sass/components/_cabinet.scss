@@ -10,7 +10,7 @@
     margin: 0 auto;
     padding: 15px;
     width: calc(100% - 30px);
-    max-width: 1300px;
+    max-width: 1024px;
     border-radius: 5px;
     background-color: var(--site-bg-contrast);
 }
@@ -36,7 +36,13 @@
 }
 
 .user_setting .small_title {
+    display: flex;
+    align-items: center;
     margin-bottom: 6px;
+}
+
+.user_setting .small_title .icon {
+    margin-right: 8px;
 }
 
 .setting_info {
@@ -73,6 +79,7 @@
 
 .change_setting input {
     flex: 1 1 auto;
+    min-width: 0px;
 }
 
 .change_setting .btn {
@@ -120,4 +127,34 @@
 
 .upload_photo {
     margin-left: 12px;
+}
+
+.cabinet_inner > .col-2 {
+    background-color: var(--grey);
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.info_author {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.info_author span {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.info_author textarea {
+    height: 150px;
+}
+
+.info_author .btn {
+    margin-top: 6px;
+    width: max-content;
+    padding: 7px 16px;
+    min-height: 32px;
 }

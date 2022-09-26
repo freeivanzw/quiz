@@ -598,9 +598,6 @@ a:active {
 }
 
 .quiz_list-add {
-  background-color: var(--primary);
-  color: var(--text-color);
-  border: var(--primary);
   margin-bottom: 20px;
   width: max-content;
 }
@@ -609,7 +606,7 @@ a:active {
   margin-left: 8px;
   width: 14px;
   height: 14px;
-  fill: var(--text-color);
+  fill: var(--text-color-contrast);
 }
 
 .quiz_list > ul {
@@ -765,7 +762,7 @@ a:active {
   margin: 0 auto;
   padding: 15px;
   width: calc(100% - 30px);
-  max-width: 1300px;
+  max-width: 1024px;
   border-radius: 5px;
   background-color: var(--site-bg-contrast);
 }
@@ -791,7 +788,13 @@ a:active {
 }
 
 .user_setting .small_title {
+  display: flex;
+  align-items: center;
   margin-bottom: 6px;
+}
+
+.user_setting .small_title .icon {
+  margin-right: 8px;
 }
 
 .setting_info {
@@ -828,6 +831,7 @@ a:active {
 
 .change_setting input {
   flex: 1 1 auto;
+  min-width: 0px;
 }
 
 .change_setting .btn {
@@ -877,6 +881,37 @@ a:active {
   margin-left: 12px;
 }
 
+.cabinet_inner > .col-2 {
+  background-color: var(--grey);
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.info_author {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.info_author span {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.info_author textarea {
+  height: 150px;
+}
+
+.info_author .btn {
+  margin-top: 6px;
+  width: max-content;
+  padding: 7px 16px;
+  min-height: 32px;
+}
+
+/*EDIT QUIZ*/
 /*START PAGE*/
 .start_page {
   background-color: var(--site-bg-contrast);
@@ -900,8 +935,50 @@ a:active {
   position: relative;
 }
 
+.author_quiz {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.photo_author {
+  margin-right: 8px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.photo_author img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .start_page-text {
   margin-bottom: 12px;
+}
+
+.author_social {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.author_social li + li {
+  margin-left: 10px;
+}
+
+.author_social li a {
+  display: block;
+  padding: 5px;
+}
+
+.author_social a .icon {
+  transition: 0.3s;
+}
+
+.author_social a:hover .icon {
+  fill: var(--dark);
 }
 
 .start_page > .col-2 .btn {
@@ -956,6 +1033,16 @@ a:active {
   max-width: 640px;
   background-color: var(--site-bg-contrast);
   border-radius: 5px;
+}
+
+.form_quiz-text {
+  color: var(--text-color-contrast);
+  display: block;
+  width: max-content;
+  margin-bottom: 10px;
+  background-color: var(--primary);
+  padding: 3px 6px;
+  border-radius: 3px;
 }
 
 .form_item {
@@ -1015,6 +1102,10 @@ a:active {
   background-color: var(--primary);
 }
 
+.checkbox_wrap input[type=checkbox] + span::before {
+  border-radius: 4px;
+}
+
 .text_wrap {
   display: flex;
   align-items: center;
@@ -1038,6 +1129,7 @@ a:active {
   height: 50px;
   width: 50px;
   position: relative;
+  cursor: pointer;
 }
 
 .checkbox_block::before {
@@ -1109,10 +1201,21 @@ a:active {
   margin-right: 10px;
   border: 1px solid var(--border-color);
   border-radius: 21px;
+  transition: 0.3s;
+}
+
+.prev_quiz:hover {
+  border-color: var(--text-color-light);
+  background-color: var(--text-color-light);
 }
 
 .prev_quiz .icon {
   fill: var(--text-color-light);
+  transition: 0.3s;
+}
+
+.prev_quiz:hover .icon {
+  fill: var(--text-color-contrast);
 }
 
 .prev_next {
@@ -1122,8 +1225,93 @@ a:active {
   padding: 10px;
   border-radius: 21px;
   border: 1px solid var(--primary);
+  transition: 0.3s;
+}
+
+.prev_next:hover {
+  color: var(--text-color-contrast);
+  background-color: var(--primary);
 }
 
 .prev_next .icon {
   margin-left: 5px;
+  transition: 0.3s;
+}
+
+.prev_next:hover .icon {
+  fill: var(--text-color-contrast);
+}
+
+/*RESUL*/
+.resul {
+  padding: 30px 0 50px 0;
+}
+
+.resul .centre {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--site-bg-contrast);
+  width: calc(100% - 20px);
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 640px;
+  border-radius: 5px;
+}
+
+.resul .total {
+  font-weight: 400;
+}
+
+.resul .total b {
+  margin-left: 5px;
+  color: var(--primary);
+}
+
+.share_quiz {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.duel {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-bottom: 25px;
+}
+
+.duel .user {
+  font-size: 16px;
+  padding: 5px;
+}
+
+.duel .user b {
+  color: var(--primary);
+}
+
+.winners {
+  margin-bottom: 25px;
+}
+
+.winners li {
+  font-size: 16px;
+}
+
+.winners li + li {
+  margin-top: 5px;
+}
+
+.winners li b {
+  color: var(--primary);
+}
+
+.donate_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.donate_box + .donate_box {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-color);
 }

@@ -3,10 +3,12 @@
     /*FOOTER SITE*/
     /*QUIZ LIST*/
     /*CABINET*/
+    /*EDIT QUIZ*/
 
 
     /*START PAGE*/
     /*FORM QUIZ*/
+    /*RESUL*/
 }
 
 @media only screen and (min-width : 640px)  {
@@ -17,13 +19,14 @@
     /*FOOTER SITE*/
     /*QUIZ LIST*/
     /*CABINET*/
-
+    /*EDIT QUIZ*/
 
     /*START PAGE*/
     /*FORM QUIZ*/
     .form_item {
         grid-template-columns: 1fr 1fr;
     }
+    /*RESUL*/
 }
 
 @media only screen and (min-width : 768px)  {
@@ -31,6 +34,24 @@
     /*FOOTER SITE*/
     /*QUIZ LIST*/
     /*CABINET*/
+    .cabinet .centre {
+        padding: 20px;
+    }
+
+    .cabinet_inner {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .cabinet_inner > .col-1 {
+        width: calc(50% - 10px);
+    }
+
+    .cabinet_inner > .col-2 {
+        margin-top: 0;
+        width: calc(50% - 10px);
+    }
+    /*EDIT QUIZ*/
 
 
     /*START PAGE*/
@@ -39,14 +60,13 @@
     }
 
     .start_page > .col-1 {
-        flex: 1 1 60%;
+        flex: 0 1 60%;
         height: auto;
         min-height: 100%;
         transition: 1s;
     }
     .start_page > .col-2 {
         flex: 0 1 40%;
-        max-width: 700px;
         justify-content: center;
         align-items: flex-start;
         transition: 1s;
@@ -63,7 +83,7 @@
 
     @keyframes anim-col-1 {
         0% {
-            flex: 1 1 60%;
+            flex: 0 1 60%;
         }
         100% {
             flex: 0 1 0%;
@@ -102,6 +122,16 @@
         text-align: end;
     }
     /*FORM QUIZ*/
+    /*RESUL*/
+    .resul .centre {
+        padding: 25px 20px;
+    }
+    .share_quiz {
+        width: max-content;
+    }
+    .duel .user {
+        font-size: 18px;
+    }
 }
 
 @media only screen and (min-width : 1024px) {
@@ -147,10 +177,12 @@
     /*FOOTER SITE*/
     /*QUIZ LIST*/
     /*CABINET*/
+    /*EDIT QUIZ*/
 
 
     /*START PAGE*/
     /*FORM QUIZ*/
+    /*RESUL*/
 }
 
 @media only screen and (min-width : 1280px) {
@@ -158,8 +190,10 @@
     /*FOOTER SITE*/
     /*QUIZ LIST*/
     /*CABINET*/
+    /*EDIT QUIZ*/
 
 
     /*START PAGE*/
     /*FORM QUIZ*/
+    /*RESUL*/
 }

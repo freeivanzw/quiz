@@ -93,6 +93,12 @@ $(function () {
         $(this).closest('.change_setting').prev('.setting_info').removeClass('active');
     })
 
+    $('.edit_social').on('click', function (e) {
+        e.preventDefault();
+
+        $(this).parent().addClass('active');
+    })
+
     if($(window).width() >= 768) {
         $('#start').on('click', function (e) {
             e.preventDefault();
