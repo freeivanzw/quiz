@@ -22,6 +22,13 @@
     position: relative;
 }
 
+.scroll_box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: auto;
+}
+
 .author_quiz {
     display: flex;
     align-items: center;
@@ -104,4 +111,33 @@
 
 .start_page-bottom .confident a {
     color: var(--text-color)
+}
+
+.start_page.temp-2 .start_page-bottom .confident a {
+    color: var(--text-color-contrast);
+}
+
+.start_page.temp-2 {
+    flex-direction: row;
+}
+
+.start_page.temp-2 > .col-1 {
+    flex: 0 1 100%;
+    min-height: 100%;
+    height: auto;
+}
+
+.start_page.temp-2 > .col-2 {
+    position: absolute;
+    background-color: #00000099;
+    height: 100%;
+    width: 100%;
+    flex: 0 1 100%;
+    justify-content: center;
+    color: #fff;
+    overflow-y: auto;
+}
+
+.start_page.temp-2 .scroll_box {
+    max-width: 460px;
 }
