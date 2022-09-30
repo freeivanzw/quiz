@@ -1,5 +1,6 @@
 /*EDIT QUIZ*/
 .edit_quiz {
+    flex: 1 1 auto;
     display: flex;
     position: relative;
     padding: 0 10px;
@@ -15,7 +16,6 @@
     height: 100%;
     border: 1px solid var(--border-color);
     border-left: none;
-    border-bottom: none;
     transition: 0.3s;
     z-index: 8;
 }
@@ -73,8 +73,10 @@
     height: 30px;
     border: 1px solid var(--border-color);
     border-radius: 50%;
+    transition: 0.3s;
 }
 
+.menu_quiz-list a:hover b,
 .menu_quiz-list a.active b {
     border-color: var(--primary);
     background-color: var(--primary);
@@ -102,6 +104,8 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
+    width: 100%;
+    max-width: 900px;
     border-radius: 5px;
     background-color: var(--site-bg-contrast);
 }
@@ -129,7 +133,7 @@
     flex-direction: column;
 }
 
-.select_dropdown > ul > li {
+.select_dropdown > ul a {
     display: flex;
     align-items: center;
 }
@@ -148,6 +152,10 @@
     overflow: hidden;
 }
 
+.select_picture:hover {
+    border-color: var(--info);
+}
+
 .select_picture img {
     width: 100%;
     height: 100%;
@@ -156,6 +164,15 @@
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.select_place {
+}
+
+.select_place .icon {
+    fill: gray;
+    cursor: pointer;
+    pointer-events: none;
 }
 
 .delete_picture {
@@ -211,6 +228,11 @@
     border-radius: 0 4px 4px 0;
     color: var(--text-color-contrast);
     text-decoration: none;
+    transition: 0.3s;
+}
+
+.add_hashtag a:hover {
+    filter: saturate(1.2);
 }
 
 .hashtag_box ul {
@@ -228,8 +250,6 @@
     border-radius: 4px;
 }
 
-
-
 .del_hashtag {
     display: flex;
     align-items: center;
@@ -238,6 +258,11 @@
     margin-left: 5px;
     width: 12px;
     height: 12px;
+    transition: 0.3s;
+}
+
+.del_hashtag:hover {
+    filter: saturate(2);
 }
 
 .del_hashtag .icon {

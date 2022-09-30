@@ -20,6 +20,31 @@
     /*QUIZ LIST*/
     /*CABINET*/
     /*EDIT QUIZ*/
+    .edit_quiz {
+        padding: 0;
+    }
+
+    .menu_quiz {
+        width: auto;
+        position: relative;
+        left: auto;
+        top: auto;
+        flex: 0 0 250px;
+        padding: 10px;
+    }
+
+    .close-menu_quiz {
+        display: none;
+    }
+
+    .open-menu_quiz {
+        display: none;
+    }
+
+    .quiz_content {
+        padding: 20px 20px 40px 20px;
+    }
+
 
     /*START PAGE*/
     /*FORM QUIZ*/
@@ -178,6 +203,20 @@
     /*QUIZ LIST*/
     /*CABINET*/
     /*EDIT QUIZ*/
+    .first_page {
+        flex-direction: row;
+        padding: 25px;
+    }
+
+    .first_page > .col-1 {
+        flex: 0 1 300px
+    }
+
+    .first_page > .col-2 {
+        flex: 1 1 auto;
+        padding-left: 10px;
+    }
+
 
 
     /*START PAGE*/

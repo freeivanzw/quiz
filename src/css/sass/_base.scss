@@ -24,6 +24,8 @@ body.overflow {
 
 main {
     flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 input {
@@ -326,7 +328,7 @@ a:active {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 48px;
+    min-height: 40px;
 }
 
 .dropdown.dropdown-open .overflow {
@@ -363,10 +365,11 @@ a:active {
     display: flex;
     align-items: center;
     border: 1px solid var(--border-color);
-    padding: 8px 50px 8px 8px;
-    border-radius: 5px;
+    padding: 0 50px 0 8px;
+    min-height: 40px;
+    border-radius: 4px;
     position: relative;
-    float: left
+    float: left;
 }
 
 .dropdown.short .overflow {
@@ -415,6 +418,7 @@ a:active {
     font-size: 14px;
     line-height: 1.6;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .dropdown UL LI:hover {
@@ -429,7 +433,6 @@ a:active {
     width: 100%;
     text-decoration: none;
     color: #282828;
-    padding: 0 10px;
     position: relative;
     float: left;
     -webkit-transition: .3s;
@@ -465,6 +468,7 @@ a:active {
     height: 100%;
     padding: 0;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .drop_arrow:after {

@@ -88,6 +88,8 @@ body.overflow {
 
 main {
   flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 input {
@@ -391,7 +393,7 @@ a:active {
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 48px;
+  min-height: 40px;
 }
 
 .dropdown.dropdown-open .overflow {
@@ -428,8 +430,9 @@ a:active {
   display: flex;
   align-items: center;
   border: 1px solid var(--border-color);
-  padding: 8px 50px 8px 8px;
-  border-radius: 5px;
+  padding: 0 50px 0 8px;
+  min-height: 40px;
+  border-radius: 4px;
   position: relative;
   float: left;
 }
@@ -480,6 +483,7 @@ a:active {
   font-size: 14px;
   line-height: 1.6;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .dropdown UL LI:hover {
@@ -494,7 +498,6 @@ a:active {
   width: 100%;
   text-decoration: none;
   color: #282828;
-  padding: 0 10px;
   position: relative;
   float: left;
   -webkit-transition: 0.3s;
@@ -530,6 +533,7 @@ a:active {
   height: 100%;
   padding: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .drop_arrow:after {
@@ -1168,6 +1172,7 @@ a:active {
 
 /*EDIT QUIZ*/
 .edit_quiz {
+  flex: 1 1 auto;
   display: flex;
   position: relative;
   padding: 0 10px;
@@ -1183,7 +1188,6 @@ a:active {
   height: 100%;
   border: 1px solid var(--border-color);
   border-left: none;
-  border-bottom: none;
   transition: 0.3s;
   z-index: 8;
 }
@@ -1241,8 +1245,10 @@ a:active {
   height: 30px;
   border: 1px solid var(--border-color);
   border-radius: 50%;
+  transition: 0.3s;
 }
 
+.menu_quiz-list a:hover b,
 .menu_quiz-list a.active b {
   border-color: var(--primary);
   background-color: var(--primary);
@@ -1270,6 +1276,8 @@ a:active {
   display: flex;
   flex-direction: column;
   padding: 10px;
+  width: 100%;
+  max-width: 900px;
   border-radius: 5px;
   background-color: var(--site-bg-contrast);
 }
@@ -1297,7 +1305,7 @@ a:active {
   flex-direction: column;
 }
 
-.select_dropdown > ul > li {
+.select_dropdown > ul a {
   display: flex;
   align-items: center;
 }
@@ -1316,6 +1324,10 @@ a:active {
   overflow: hidden;
 }
 
+.select_picture:hover {
+  border-color: var(--info);
+}
+
 .select_picture img {
   width: 100%;
   height: 100%;
@@ -1324,6 +1336,12 @@ a:active {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.select_place .icon {
+  fill: gray;
+  cursor: pointer;
+  pointer-events: none;
 }
 
 .delete_picture {
@@ -1379,6 +1397,11 @@ a:active {
   border-radius: 0 4px 4px 0;
   color: var(--text-color-contrast);
   text-decoration: none;
+  transition: 0.3s;
+}
+
+.add_hashtag a:hover {
+  filter: saturate(1.2);
 }
 
 .hashtag_box ul {
@@ -1404,6 +1427,11 @@ a:active {
   margin-left: 5px;
   width: 12px;
   height: 12px;
+  transition: 0.3s;
+}
+
+.del_hashtag:hover {
+  filter: saturate(2);
 }
 
 .del_hashtag .icon {
@@ -1553,6 +1581,10 @@ a:active {
 
 .start_page.temp-2 .scroll_box {
   max-width: 460px;
+}
+
+.category_dropdown {
+  max-width: 275px;
 }
 
 /*FORM QUIZ*/
