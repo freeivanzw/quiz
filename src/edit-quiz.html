@@ -36,57 +36,57 @@
 <main>
     <!--EDIT QUIZ-->
     <section class="edit_quiz">
-
-        <aside>
-            <b>Створення квізу</b>
-            <ul>
-                <li><a href="#" class="active">Стартова сторінка і опис</a></li>
-                <li><a href="#">Запитання</a></li>
-                <li><a href="#">Результати</a></li>
+        <aside class="menu_quiz">
+            <a href="#" class="close-menu_quiz"><svg class="icon"><use xlink:href="./images/sprite.svg#close"></use></svg></a>
+            <b class="quiz_title-menu">Створення квізу</b>
+            <ul class="menu_quiz-list">
+                <li><a href="#" class="active"><b>1</b><span>Стартова сторінка і опис</span></a></li>
+                <li><a href="#"><b>2</b><span>Запитання</span></a></li>
+                <li><a href="#"><b>3</b><span>Результати</span></a></li>
             </ul>
         </aside>
         <div class="quiz_content">
-            <div class="start_page">
+            <a href="#" class="open-menu_quiz">open menu<svg class="icon"><use xlink:href="./images/sprite.svg#menu"></use></svg></a>
+            <div class="first_page">
                 <div class="col-1">
-                    <b>Дизайн</b>
-                    <div class="select_dropdown">
-                        <div class="select_box">
-                            <img src="./images/standart.png">
-                            <span>Standart</span>
-                        </div>
-                        <ul class="select_list">
+                    <b class="small_title">Дизайн</b>
+
+                    <div class="dropdown select_dropdown">
+                        <div class="overflow"><img src="./images/standart.png"><span>Standart</span><button type="button" class="drop_arrow"></button></div>
+                        <ul style="display: none">
                             <li>
                                 <img src="./images/standart.png">
-                                <span>Standart</span>
+                                <span>Standart 2</span>
                             </li>
                             <li>
                                 <img src="./images/standart.png">
-                                <span>Standart</span>
+                                <span>Standart 3</span>
                             </li>
                         </ul>
+                        <input type="hidden" name="delivery" value="">
                     </div>
-                    <b>Зображення</b>
+                    <b class="small_title">Зображення</b>
                     <div class="select_picture">
                         <div class="select_place"><svg class="icon"><use xlink:href="./images/sprite.svg#upload"></use></svg></div>
-                        <img src="./images/start-page-desk.png">
+                        <!--<img src="./images/start-page-desk.png">-->
                         <a href="#" class="delete_picture"><svg class="icon"><use xlink:href="./images/sprite.svg#trash"></use></svg></a>
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="text_box">
-                        <b>Заголовок</b>
+                        <b class="small_title">Заголовок</b>
                         <input type="text">
                     </div>
                     <div class="text_box">
-                        <b>Текст</b>
+                        <b class="small_title">Текст</b>
                         <textarea></textarea>
                     </div>
                     <div class="text_box">
-                        <b>Текст на кнопці</b>
+                        <b class="small_title">Текст на кнопці</b>
                         <input type="text">
                     </div>
                     <div class="hashtag_box">
-                        <b>Хештеги</b>
+                        <b class="small_title">Хештеги</b>
                         <div class="add_hashtag">
                             <input type="text">
                             <a href="#">Додати</a>
