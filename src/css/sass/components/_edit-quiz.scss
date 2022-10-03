@@ -270,3 +270,175 @@
     height: 12px;
     fill: var(--danger)
 }
+
+.next_settings {
+    margin-top: 22px;
+}
+
+.question_name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.question_name input[type=text] {
+    font-size: 18px;
+    flex: 1 1 auto;
+}
+
+.question_name .btn {
+    margin-left: 10px;
+}
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+}
+
+.question_one {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--site-bg-contrast);
+}
+
+.question_header {
+    display: flex;
+    align-items: center;
+}
+
+.question_title {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.show_more {
+    flex: 0 0 30px;
+    margin-left: 6px;
+    height: 30px;
+    position: relative;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: 0.3s
+}
+
+.show_more:hover {
+    background-color: #e8e8e8;
+}
+
+.show_more::after,
+.show_more::before {
+    content: "";
+    width: 1px;
+    height: 8px;
+    background-color: var(--primary);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom;
+}
+
+.show_more::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.show_more::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.show_more.active::after,
+.show_more.active::before {
+    transform-origin: top;
+}
+
+.hide_question,
+.copy_question,
+.delete_question {
+    flex: 0 0 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: 0.3s
+}
+.hide_question:hover,
+.copy_question:hover,
+.delete_question:hover {
+    background-color: #e8e8e8;
+}
+
+
+.hide_question .icon {
+    transition: 0.3s;
+}
+
+.hide_question.active .icon {
+    filter: contrast(0);
+}
+
+.copy_question .icon {
+    fill: var(--text-color-light);
+    transition: 0.3s;
+}
+
+.copy_question:hover .icon {
+    fill: var(--text-color)
+}
+
+.delete_question .icon {
+    fill: var(--danger);
+    transition: 0.3s;
+}
+
+.delete_question:hover .icon {
+    fill: var(--text-color);
+}
+
+.move_question {
+    flex: 0 0 30px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.move_question a {
+    position: relative;
+    width: 100%;
+    height: 20px;
+}
+
+.move_question a:nth-child(1) {
+    transform: rotate(180deg);
+}
+
+.move_question a::before,
+.move_question a::after {
+    content: "";
+    width: 1px;
+    height: 6px;
+    background-color: var(--text-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transition: 0.3s;
+}
+
+.move_question a::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.move_question a::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.move_question a:hover::before,
+.move_question a:hover::after {
+    background-color: var(--warning);
+}

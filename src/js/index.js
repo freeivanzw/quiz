@@ -227,4 +227,5 @@ $(function () {
 
     $('.select_dropdown').dropdown()
     $('.category_dropdown').dropdown()
+
 })
