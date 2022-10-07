@@ -42,7 +42,6 @@
             <ul class="menu_quiz-list">
                 <li><a href="./edit-quiz.html"><b>1</b><span>Стартова сторінка і опис</span></a></li>
                 <li><a href="#" class="active"><b>2</b><span>Запитання</span></a></li>
-                <li><a href="#"><b>3</b><span>Результати</span></a></li>
             </ul>
         </aside>
         <div class="quiz_content">
@@ -64,41 +63,274 @@
                             <a href="#" class="move_down"></a>
                         </div>
                     </div>
-                    <div class="question_content">
-                        <div class="select_variant">
-                            <label>
-                                <svg class="icon"><use xlink:href="./images/sprite.svg#list"></use></svg>
-                                <span>список</span>
-                                <input type="radio" name="select">
-                            </label>
-                            <label>
-                                <svg class="icon"><use xlink:href="./images/sprite.svg#list-photo-1"></use></svg>
-                                <span>список з фото</span>
-                                <input type="radio" name="select">
-                            </label>
-                            <label>
-                                <svg class="icon"><use xlink:href="./images/sprite.svg#list-photo-2"></use></svg>
-                                <span>список і фото</span>
-                                <input type="radio" name="select">
-                            </label>
-                            <label>
-                                <svg class="icon"><use xlink:href="./images/sprite.svg#write"></use></svg>
-                                <span>поле для написання відповіді</span>
-                                <input type="radio" name="select">
-                            </label>
-                             <label>
-                                <svg class="icon"><use xlink:href="./images/sprite.svg#date"></use></svg>
-                                <span>дата</span>
-                                <input type="radio" name="select">
-                            </label>
-                             <label>
-                                <svg class="icon"><use xlink:href="./images/sprite.svg#rating"></use></svg>
-                                <span>оцінка</span>
-                                <input type="radio" name="select">
-                            </label>
+                </div>
+                <div class="question_one">
+                    <div class="question_header">
+                        <input type="text" placeholder="Заголовок питання" class="question_title">
+                        <a href="#" class="show_more"></a>
+                        <a href="#" class="hide_question"><svg class="icon"><use xlink:href="./images/sprite.svg#eye"></use></svg></a>
+                        <a href="#" class="copy_question"><svg class="icon"><use xlink:href="./images/sprite.svg#copy"></use></svg></a>
+                        <a href="#" class="delete_question"><svg class="icon"><use xlink:href="./images/sprite.svg#trash"></use></svg></a>
+                        <div class="move_question">
+                            <a href="#" class="move_up"></a>
+                            <a href="#" class="move_down"></a>
                         </div>
                     </div>
+                    <div class="question_content">
+                        <ul class="select_variant">
+                            <li>
+                                <svg class="icon"><use xlink:href="./images/sprite.svg#list"></use></svg>
+                                <span>список</span>
+                            </li>
+                            <li class="active">
+                                <svg class="icon"><use xlink:href="./images/sprite.svg#list-photo-1"></use></svg>
+                                <span>список з фото</span>
+                            </li>
+                            <li>
+                                <svg class="icon"><use xlink:href="./images/sprite.svg#list-photo-2"></use></svg>
+                                <span>список і фото</span>
+                            </li>
+                            <li>
+                                <svg class="icon"><use xlink:href="./images/sprite.svg#write"></use></svg>
+                                <span>поле для написання відповіді</span>
+                            </li>
+                            <li>
+                                <svg class="icon"><use xlink:href="./images/sprite.svg#date"></use></svg>
+                                <span>дата</span>
+                            </li>
+                            <li>
+                                <svg class="icon"><use xlink:href="./images/sprite.svg#rating"></use></svg>
+                                <span>оцінка</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+                <div class="question_one">
+                    <div class="question_header">
+                        <input type="text" placeholder="Заголовок питання" class="question_title">
+                        <a href="#" class="show_more"></a>
+                        <a href="#" class="hide_question"><svg class="icon"><use xlink:href="./images/sprite.svg#eye"></use></svg></a>
+                        <a href="#" class="copy_question"><svg class="icon"><use xlink:href="./images/sprite.svg#copy"></use></svg></a>
+                        <a href="#" class="delete_question"><svg class="icon"><use xlink:href="./images/sprite.svg#trash"></use></svg></a>
+                        <div class="move_question">
+                            <a href="#" class="move_up"></a>
+                            <a href="#" class="move_down"></a>
+                        </div>
+                    </div>
+                    <div class="question_content">
+                        <ul class="variant_inner">
+                            <li>
+                                <div class="move_variant">
+                                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#arrow"></use></svg></a>
+                                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#arrow"></use></svg></a>
+                                </div>
+                                <div class="add_photo">
+                                    <div class="add_photo-img">
+                                        <svg class="icon"><use xlink:href="./images/sprite.svg#picture"></use></svg>
+                                        <img src="./images/start-page-desk.png" alt="">
+                                    </div>
+                                    <a href="#" class="add_photo-btn remove-btn"><svg class="icon"><use xlink:href="./images/sprite.svg#plus"></use></svg></a>
+                                </div>
+                                <input type="text" placeholder="Додайте відповідь">
+                                <a href="#" class="del_variant"><svg class="icon"><use xlink:href="./images/sprite.svg#trash"></use></svg></a>
+                                <div class="variant_points">
+                                    <span>Бали:</span>
+                                    <input type="number" placeholder="0" autocomplete="off" step="1">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="move_variant">
+                                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#arrow"></use></svg></a>
+                                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#arrow"></use></svg></a>
+                                </div>
+                                <input type="text" placeholder="Додайте відповідь">
+                                <a href="#" class="del_variant"><svg class="icon"><use xlink:href="./images/sprite.svg#trash"></use></svg></a>
+                                <div class="variant_points">
+                                    <span>Бали:</span>
+                                    <input type="number" placeholder="0" autocomplete="off" step="1">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="move_variant">
+                                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#arrow"></use></svg></a>
+                                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#arrow"></use></svg></a>
+                                </div>
+                                <textarea placeholder="Додайте відповідь"></textarea>
+                                <a href="#" class="del_variant"><svg class="icon"><use xlink:href="./images/sprite.svg#trash"></use></svg></a>
+                                <div class="variant_points">
+                                    <span>Бали:</span>
+                                    <input type="number" placeholder="0" autocomplete="off" step="1">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="move_variant">
+                                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#arrow"></use></svg></a>
+                                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#arrow"></use></svg></a>
+                                </div>
+                                <input type="date">
+                                <a href="#" class="del_variant"><svg class="icon"><use xlink:href="./images/sprite.svg#trash"></use></svg></a>
+                                <div class="variant_points">
+                                    <span>Бали:</span>
+                                    <input type="number" placeholder="0" autocomplete="off" step="1">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="move_variant">
+                                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#arrow"></use></svg></a>
+                                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#arrow"></use></svg></a>
+                                </div>
+                                <div class="rating_variant">
+                                    <div class="row-1">
+                                        <svg class="icon"><use xlink:href="./images/sprite.svg#star"></use></svg>
+                                        <svg class="icon"><use xlink:href="./images/sprite.svg#star"></use></svg>
+                                        <svg class="icon"><use xlink:href="./images/sprite.svg#star"></use></svg>
+                                        <svg class="icon"><use xlink:href="./images/sprite.svg#star"></use></svg>
+                                        <svg class="icon"><use xlink:href="./images/sprite.svg#star"></use></svg>
+                                    </div>
+                                    <div class="row-2">
+                                        <span>Негативно</span>
+                                        <span>Позитивно</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="del_variant"><svg class="icon"><use xlink:href="./images/sprite.svg#trash"></use></svg></a>
+                                <div class="variant_points">
+                                    <span>Бали:</span>
+                                    <input type="number" placeholder="0" autocomplete="off" step="1">
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="add_variant">Додати відповідь</a>
+                    </div>
+                </div>
+                <div class="question_one">
+                    <div class="question_header">
+                        <input type="text" placeholder="Заголовок питання" class="question_title">
+                        <a href="#" class="show_more"></a>
+                        <a href="#" class="hide_question"><svg class="icon"><use xlink:href="./images/sprite.svg#eye"></use></svg></a>
+                        <a href="#" class="copy_question"><svg class="icon"><use xlink:href="./images/sprite.svg#copy"></use></svg></a>
+                        <a href="#" class="delete_question"><svg class="icon"><use xlink:href="./images/sprite.svg#trash"></use></svg></a>
+                        <div class="move_question">
+                            <a href="#" class="move_up"></a>
+                            <a href="#" class="move_down"></a>
+                        </div>
+                    </div>
+                    <div class="question_content">
+                        <ul class="select_variant">
+                            <li>
+                                <svg class="icon"><use xlink:href="./images/sprite.svg#list"></use></svg>
+                                <span>список</span>
+                            </li>
+                            <li class="active">
+                                <svg class="icon"><use xlink:href="./images/sprite.svg#list-photo-1"></use></svg>
+                                <span>список з фото</span>
+                            </li>
+                            <li>
+                                <svg class="icon"><use xlink:href="./images/sprite.svg#list-photo-2"></use></svg>
+                                <span>список і фото</span>
+                            </li>
+                            <li>
+                                <svg class="icon"><use xlink:href="./images/sprite.svg#write"></use></svg>
+                                <span>поле для написання відповіді</span>
+                            </li>
+                            <li>
+                                <svg class="icon"><use xlink:href="./images/sprite.svg#date"></use></svg>
+                                <span>дата</span>
+                            </li>
+                            <li>
+                                <svg class="icon"><use xlink:href="./images/sprite.svg#rating"></use></svg>
+                                <span>оцінка</span>
+                            </li>
+                        </ul>
+                        <ul class="variant_inner">
+                            <li>
+                                <div class="move_variant">
+                                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#arrow"></use></svg></a>
+                                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#arrow"></use></svg></a>
+                                </div>
+                                <div class="add_photo">
+                                    <div class="add_photo-img">
+                                        <svg class="icon"><use xlink:href="./images/sprite.svg#picture"></use></svg>
+                                        <img src="./images/start-page-desk.png" alt="">
+                                    </div>
+                                    <a href="#" class="add_photo-btn remove-btn"><svg class="icon"><use xlink:href="./images/sprite.svg#plus"></use></svg></a>
+                                </div>
+                                <input type="text" placeholder="Додайте відповідь">
+                                <a href="#" class="del_variant"><svg class="icon"><use xlink:href="./images/sprite.svg#trash"></use></svg></a>
+                                <div class="variant_points">
+                                    <span>Бали:</span>
+                                    <input type="number" placeholder="0" autocomplete="off" step="1">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="move_variant">
+                                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#arrow"></use></svg></a>
+                                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#arrow"></use></svg></a>
+                                </div>
+                                <input type="text" placeholder="Додайте відповідь">
+                                <a href="#" class="del_variant"><svg class="icon"><use xlink:href="./images/sprite.svg#trash"></use></svg></a>
+                                <div class="variant_points">
+                                    <span>Бали:</span>
+                                    <input type="number" placeholder="0" autocomplete="off" step="1">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="move_variant">
+                                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#arrow"></use></svg></a>
+                                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#arrow"></use></svg></a>
+                                </div>
+                                <textarea placeholder="Додайте відповідь"></textarea>
+                                <a href="#" class="del_variant"><svg class="icon"><use xlink:href="./images/sprite.svg#trash"></use></svg></a>
+                                <div class="variant_points">
+                                    <span>Бали:</span>
+                                    <input type="number" placeholder="0" autocomplete="off" step="1">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="move_variant">
+                                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#arrow"></use></svg></a>
+                                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#arrow"></use></svg></a>
+                                </div>
+                                <input type="date">
+                                <a href="#" class="del_variant"><svg class="icon"><use xlink:href="./images/sprite.svg#trash"></use></svg></a>
+                                <div class="variant_points">
+                                    <span>Бали:</span>
+                                    <input type="number" placeholder="0" autocomplete="off" step="1">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="move_variant">
+                                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#arrow"></use></svg></a>
+                                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#arrow"></use></svg></a>
+                                </div>
+                                <div class="rating_variant">
+                                    <div class="row-1">
+                                        <svg class="icon"><use xlink:href="./images/sprite.svg#star"></use></svg>
+                                        <svg class="icon"><use xlink:href="./images/sprite.svg#star"></use></svg>
+                                        <svg class="icon"><use xlink:href="./images/sprite.svg#star"></use></svg>
+                                        <svg class="icon"><use xlink:href="./images/sprite.svg#star"></use></svg>
+                                        <svg class="icon"><use xlink:href="./images/sprite.svg#star"></use></svg>
+                                    </div>
+                                    <div class="row-2">
+                                        <span>Негативно</span>
+                                        <span>Позитивно</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="del_variant"><svg class="icon"><use xlink:href="./images/sprite.svg#trash"></use></svg></a>
+                                <div class="variant_points">
+                                    <span>Бали:</span>
+                                    <input type="number" placeholder="0" autocomplete="off" step="1">
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="add_variant">Додати відповідь</a>
+                    </div>
+                </div>
+                <a href="#" class="add_question"><svg class="icon"><use xlink:href="./images/sprite.svg#plus"></use></svg></a>
+            </div>
+            <div class="question_control">
+                <a href="#" class="btn btn_fill">Опублікувати</a>
+                <a href="#" class="btn">Перейти до налаштування результатів</a>
+                <a href="#" class="btn preview_question">Попередній перегляд</a>
             </div>
         </div>
     </section>

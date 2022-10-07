@@ -4,6 +4,10 @@
   /*QUIZ LIST*/
   /*CABINET*/
   /*EDIT QUIZ*/
+  .select_variant {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   /*START PAGE*/
   /*FORM QUIZ*/
   /*RESUL*/
@@ -27,7 +31,7 @@
     position: relative;
     left: auto;
     top: auto;
-    flex: 0 0 250px;
+    flex: 0 0 225px;
     padding: 10px;
   }
 
@@ -218,6 +222,22 @@
   .next_settings {
     width: max-content;
     margin-left: auto;
+  }
+
+  .select_variant {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .question_control {
+    flex-direction: row;
+  }
+
+  .question_control .btn {
+    margin: 0 15px 0 0;
+  }
+
+  .question_control .btn.preview_question {
+    margin: 0 0 0 auto;
   }
 
   /*START PAGE*/

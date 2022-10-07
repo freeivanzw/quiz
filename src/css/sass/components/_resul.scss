@@ -24,6 +24,39 @@
     color: var(--primary)
 }
 
+.rate_quiz {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.rate_quiz span {
+    margin-right: 10px;
+}
+
+.rate_quiz .star_wrap {
+    display: flex;
+}
+
+.rate_quiz a {
+    padding: 3px;
+    filter: contrast(0);
+    transition: 0.3s;
+}
+
+.rate_quiz .icon {
+    display: flex;
+    width: 26px;
+    height: 26px;
+    fill: var(--warning);
+    transition: 0.3s;
+}
+
+.rate_quiz .star_wrap a.active {
+    filter: contrast(1);
+}
+
+
 .share_quiz {
     width: 100%;
     margin-bottom: 25px;
