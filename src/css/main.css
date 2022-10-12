@@ -366,6 +366,17 @@ a:active {
   flex-direction: column;
 }
 
+.login_box {
+  display: flex;
+  flex-direction: column;
+  margin: 40px auto 75px auto;
+  width: calc(100% - 30px);
+  max-width: 500px;
+  background-color: var(--site-bg-contrast);
+  padding: 20px;
+  border-radius: 5px;
+}
+
 .sub_text {
   margin-bottom: 25px;
 }
@@ -1999,7 +2010,12 @@ a:active {
 }
 
 .start_page.temp-2 .start_page-bottom .confident a {
+  text-decoration: none;
   color: var(--text-color-contrast);
+}
+
+.start_page.temp-2 .start_page-bottom .confident a:hover {
+  text-decoration: underline;
 }
 
 .start_page.temp-2 {

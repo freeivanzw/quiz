@@ -114,7 +114,12 @@
 }
 
 .start_page.temp-2 .start_page-bottom .confident a {
+    text-decoration: none;
     color: var(--text-color-contrast);
+}
+
+.start_page.temp-2 .start_page-bottom .confident a:hover {
+    text-decoration: underline;
 }
 
 .start_page.temp-2 {
