@@ -1,7 +1,11 @@
 /*RESUL*/
 
 .resul {
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     padding: 30px 0 50px 0;
+    background-color: var(--site-bg-contrast);
+    flex: 1 1 auto;
 }
 
 .resul .centre {
@@ -13,6 +17,11 @@
     padding: 10px;
     max-width: 640px;
     border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+.resul .item_title {
+    text-align: center;
 }
 
 .resul .total {
@@ -72,6 +81,7 @@
 .duel .user {
     font-size: 16px;
     padding: 5px;
+    text-align: center;
 }
 
 .duel .user b {

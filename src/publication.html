@@ -34,44 +34,41 @@
     </div>
 </header>
 <main>
-    <!--RESUL-->
-    <section class="resul">
-        <div class="centre">
-            <span class="item_title">Результати</span>
-            <div class="duel">
-                <div class="user">1. <b>85 балів</b><span> Ivan Kozak</span></div>
-                <div class="user">2. <b>83 балів</b><span> Test Test</span></div>
-            </div>
-            <!--<ul class="winners">
-                <li>1. <b>85</b> Ivan Kozak</li>
-                <li>2. <b>83</b> Test Test</li>
-                <li>3. <b>81</b> Test Test</li>
-            </ul>-->
-            <div class="rate_quiz">
-                <span>Оцініть квіз:</span>
-                <div class="star_wrap">
-                    <a href="#" class="active"><svg class="icon"><use xlink:href="./images/sprite.svg#star"></use></svg></a>
-                    <a href="#" class="active"><svg class="icon"><use xlink:href="./images/sprite.svg#star"></use></svg></a>
-                    <a href="#" class="active"><svg class="icon"><use xlink:href="./images/sprite.svg#star"></use></svg></a>
-                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#star"></use></svg></a>
-                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#star"></use></svg></a>
+    <!--EDIT QUIZ-->
+    <section class="edit_quiz">
+        <aside class="menu_quiz">
+            <a href="#" class="close-menu_quiz"><svg class="icon"><use xlink:href="./images/sprite.svg#close"></use></svg></a>
+            <b class="quiz_title-menu">Створення квізу</b>
+            <ul class="menu_quiz-list">
+                <li><a href="./edit-quiz.html"><b>1</b><span>Стартова сторінка і опис</span></a></li>
+                <li><a href="#"><b>2</b><span>Запитання</span></a></li>
+                <li><a href="#" class="active"><b>3</b><span>Публікація</span></a></li>
+            </ul>
+        </aside>
+        <div class="quiz_content">
+            <div class="publication">
+                <span class="item_title">Публікація</span>
+                <div class="publication_share">
+                    <b>Поділитись</b>
+                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#facebook"></use></svg></a>
+                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#whatsapp"></use></svg></a>
+                    <a href="#"><svg class="icon"><use xlink:href="./images/sprite.svg#twitter"></use></svg></a>
                 </div>
+                <div class="publication_link">
+                    <span>http://quiz.com/</span>
+                    <input type="text" placeholder="nhbk97k3mxznj3">
+                    <a href="#" class="publication_copy btn btn_fill"><svg class="icon"><use xlink:href="./images/sprite.svg#copy"></use></svg></a>
+                </div>
+                <span class="publication_status not_active">Не опублікований</span>
+                <span class="publication_status active">Опублікований</span>
             </div>
-            <div class="btn btn_fill share_quiz">Поділитись квестом</div>
-            <div class="donate_box">
-                <b>Підтрмати Україну</b>
-                <div class="btn">Донатити</div>
-            </div>
-            <div class="donate_box">
-                <b>Підтримати армію</b>
-                <div class="btn">Донатити</div>
-            </div>
-            <div class="donate_box">
-                <b>Допомога біженцям</b>
-                <div class="btn">Донатити</div>
+            <div class="question_control">
+                <a href="#" class="btn btn_fill">Опублікувати</a>
+                <a href="#" class="btn preview_question">Попередній перегляд</a>
             </div>
         </div>
     </section>
+
     <div class="shadow hidden">close</div>
 </main>
 <!--FOOTER SITE-->
@@ -79,8 +76,7 @@
     <div class="bottom_info">
         <span class="copyright">© Copyright - <a href="">Dymolux.com.ua</a> 2013 - 2022</span>
         <span class="confident">
-                <a href="https://websufix.com/e-commerce">Створення інтернет магазину</a>
-                <a href="https://websufix.com">веб студія</a> SUFIX
+                <a href="https://websufix.com">SUFIX</a>
             </span>
     </div>
     <ul class="footer_email">
