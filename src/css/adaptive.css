@@ -53,8 +53,27 @@
 
   /*START PAGE*/
   /*FORM QUIZ*/
-  .form_item {
+  .list_quiz {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .photo_quiz {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .list-photo_quiz {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .list-photo_quiz .col-1 {
+    flex: 0 1 calc(50% - 10px);
+    margin-right: 20px;
+  }
+
+  .list-photo_quiz .col-2 {
+    flex: 0 1 calc(50% - 10px);
+    margin-bottom: 0;
   }
 
   /*RESUL*/

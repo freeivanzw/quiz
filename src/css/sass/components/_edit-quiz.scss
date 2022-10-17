@@ -542,6 +542,25 @@
     filter: contrast(1);
 }
 
+.variant_date {
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border-radius: 4px;
+    padding: 0 8px 0 15px;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+}
+
+.variant_date .icon {
+    margin-left: 8px;
+    width: 14px;
+    height: 14px;
+    filter: contrast(0);
+}
+
 .add_photo {
     flex: 0 0 auto;
     display: flex;
@@ -710,4 +729,3 @@
     text-align: center;
     margin-bottom: 10px;
 }
-

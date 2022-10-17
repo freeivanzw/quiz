@@ -837,10 +837,6 @@ a:active {
   flex-direction: column;
 }
 
-.copyright {
-  margin-bottom: 5px;
-}
-
 .footer_email {
   display: flex;
   flex-direction: column;
@@ -1815,6 +1811,25 @@ a:active {
   filter: contrast(1);
 }
 
+.variant_date {
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border-radius: 4px;
+  padding: 0 8px 0 15px;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+}
+
+.variant_date .icon {
+  margin-left: 8px;
+  width: 14px;
+  height: 14px;
+  filter: contrast(0);
+}
+
 .add_photo {
   flex: 0 0 auto;
   display: flex;
@@ -2139,6 +2154,10 @@ a:active {
 /*FORM QUIZ*/
 .form_quiz {
   padding: 30px 10px 50px 10px;
+  flex: 1 1 auto;
+  background-color: var(--site-bg-contrast);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .form_quiz .centre {
@@ -2147,9 +2166,10 @@ a:active {
   margin: 0 auto;
   padding: 15px;
   width: 100%;
-  max-width: 640px;
+  max-width: 860px;
   background-color: var(--site-bg-contrast);
   border-radius: 5px;
+  border: 1px solid var(--border-color);
 }
 
 .form_quiz-text {
@@ -2162,116 +2182,149 @@ a:active {
   border-radius: 3px;
 }
 
-.form_item {
-  display: none;
-  grid-template-columns: 1fr;
-  grid-gap: 15px;
-  margin-bottom: 30px;
-}
-
-.form_item.active {
+.list_quiz {
   display: grid;
+  grid-gap: 20px;
+  margin-bottom: 15px;
 }
 
-.checkbox_wrap {
+.list_quiz label {
   position: relative;
 }
 
-.checkbox_wrap input[type=checkbox],
-.checkbox_wrap input[type=radio] {
-  width: 0;
-  height: 0;
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  top: 0;
-}
-
-.checkbox_wrap span {
-  position: relative;
-  display: flex;
-  align-items: center;
-  min-height: 50px;
-  padding: 10px 20px 10px 50px;
-  border: 1px solid var(--border-color);
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.checkbox_wrap span::before {
-  content: "";
-  width: 16px;
-  height: 16px;
-  border: 1px solid var(--border-color);
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 18px;
-  transform: translateY(-50%);
-  transition: 0.3s;
-}
-
-.checkbox_wrap input:checked + span {
-  border-color: var(--primary);
-}
-
-.checkbox_wrap input:checked + span::before {
-  background-color: var(--primary);
-}
-
-.checkbox_wrap input[type=checkbox] + span::before {
-  border-radius: 4px;
-}
-
-.text_wrap {
-  display: flex;
-  align-items: center;
-  height: 50px;
-  position: relative;
-  border: 1px solid var(--border-color);
-  border-radius: 5px;
-}
-
-.text_wrap input[type=checkbox] {
+.list_quiz input[type=checkbox],
+.list_quiz input[type=radio] {
   position: absolute;
   top: 0;
   left: 0;
+  margin: 0;
   width: 0;
   height: 0;
-  visibility: hidden;
   opacity: 0;
 }
 
-.checkbox_block {
-  height: 50px;
-  width: 50px;
-  position: relative;
-  cursor: pointer;
-}
-
-.checkbox_block::before {
-  content: "";
-  width: 16px;
-  height: 16px;
+.list_quiz .label_box,
+.list-photo_quiz .label_box {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 10px 45px;
+  min-height: 45px;
+  border-radius: 5px;
   border: 1px solid var(--border-color);
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  cursor: pointer;
+  position: relative;
   transition: 0.3s;
 }
 
-.text_wrap label input:checked + .checkbox_block::before {
-  background-color: var(--primary);
+.list_quiz .label_box:hover,
+.list-photo_quiz .label_box:hover,
+.list-photo_quiz input[type=radio]:checked + .label_box,
+.list_quiz input[type=checkbox]:checked + .label_box,
+.list_quiz input[type=radio]:checked + .label_box {
+  border-color: var(--primary);
 }
 
-.text_wrap input[type=text] {
-  height: 100%;
-  flex: 1 1 auto;
-  border: none;
-  border-radius: 0 5px 5px 0;
-  border-left: 1px solid var(--border-color);
+.list-photo_quiz input[type=radio] + .label_box::after,
+.list_quiz input[type=checkbox] + .label_box::after,
+.list_quiz input[type=radio] + .label_box::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  background-color: var(--primary);
+  transform: translateY(-50%);
+  border-radius: 3px;
+  filter: contrast(0);
+  transition: 0.3s;
+}
+
+.list-photo_quiz input[type=radio] + .label_box::after,
+.list_quiz input[type=radio] + .label_box::after {
+  border-radius: 50%;
+}
+
+.list-photo_quiz input[type=radio]:checked + .label_box::after,
+.list_quiz input[type=checkbox]:checked + .label_box::after,
+.list_quiz input[type=radio]:checked + .label_box::after {
+  filter: contrast(1);
+}
+
+.photo_quiz {
+  display: grid;
+  grid-gap: 20px;
+  margin-bottom: 15px;
+}
+
+.photo_quiz label {
+  position: relative;
+}
+
+.list-photo_quiz input[type=radio],
+.photo_quiz input[type=checkbox],
+.photo_quiz input[type=radio] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.photo_quiz picture {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.photo_quiz picture:hover,
+.photo_quiz input[type=checkbox]:checked + picture,
+.photo_quiz input[type=radio]:checked + picture {
+  border-color: var(--primary);
+}
+
+.photo_quiz img {
+  width: 100%;
+  height: auto;
+}
+
+.photo_quiz figcaption {
+  min-height: 40px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+.list-photo_quiz {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 15px;
+}
+
+.list-photo_quiz .col-1 {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.list-photo_quiz label {
+  position: relative;
+}
+
+.list-photo_quiz .col-2 {
+  margin-bottom: 20px;
+}
+
+.list-photo_quiz .col-2 img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
 .quiz_panel {
@@ -2357,6 +2410,42 @@ a:active {
 
 .prev_next:hover .icon {
   fill: var(--text-color-contrast);
+}
+
+.text-box_quiz {
+  margin-bottom: 15px;
+}
+
+.text-box_quiz input {
+  width: 100%;
+}
+
+.text-box_quiz input:focus,
+.text-box_quiz input:hover {
+  border-color: var(--primary);
+}
+
+.date_quiz {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 200px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.date_quiz .icon {
+  margin: 10px;
+  filter: contrast(0);
+}
+
+.date_quiz input {
+  flex: 1 1 auto;
+  border-radius: 0;
+  border: none;
 }
 
 /*RESUL*/
