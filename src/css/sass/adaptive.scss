@@ -15,6 +15,11 @@
     /*START PAGE*/
     /*FORM QUIZ*/
     /*RESUL*/
+    /*SEARCH QUIZ*/
+    .search_form {
+        padding: 30px 22px;
+    }
+    /*CATEGORIES QUIZ*/
 }
 
 @media only screen and (min-width : 640px)  {
@@ -77,6 +82,11 @@
     }
 
     /*RESUL*/
+    /*SEARCH QUIZ*/
+    /*CATEGORIES QUIZ*/
+    .categories_list {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media only screen and (min-width : 768px)  {
@@ -183,6 +193,11 @@
     .duel .user {
         font-size: 18px;
     }
+    /*SEARCH QUIZ*/
+    /*CATEGORIES QUIZ*/
+    .categories_list {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 @media only screen and (min-width : 1024px) {
@@ -267,6 +282,15 @@
     /*START PAGE*/
     /*FORM QUIZ*/
     /*RESUL*/
+    /*SEARCH QUIZ*/
+    /*CATEGORIES QUIZ*/
+    .categories_quiz .centre {
+        padding: 30px 22px;
+    }
+
+    .categories_list {
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
 
 @media only screen and (min-width : 1280px) {
@@ -275,9 +299,9 @@
     /*QUIZ LIST*/
     /*CABINET*/
     /*EDIT QUIZ*/
-
-
     /*START PAGE*/
     /*FORM QUIZ*/
     /*RESUL*/
+    /*SEARCH QUIZ*/
+    /*CATEGORIES QUIZ*/
 }
