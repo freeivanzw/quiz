@@ -82,6 +82,10 @@ body {
   background-color: var(--site-bg);
 }
 
+body.user_page {
+  background-color: var(--site-bg-contrast);
+}
+
 body.overflow {
   overflow: hidden;
 }
@@ -375,6 +379,7 @@ a:active {
   background-color: var(--site-bg-contrast);
   padding: 20px;
   border-radius: 5px;
+  box-shadow: #ddd 0 0 10px;
 }
 
 .sub_text {
@@ -670,6 +675,10 @@ a:active {
   position: relative;
 }
 
+body.user_page .header_site {
+  border-bottom: 1px solid var(--border-color);
+}
+
 .header_logo {
   display: block;
   width: 125px;
@@ -828,6 +837,10 @@ a:active {
   align-items: center;
   justify-content: space-between;
   padding: 10px;
+}
+
+body.user_page .footer_site {
+  border-top: 1px solid var(--border-color);
 }
 
 .bottom_info {
@@ -2578,6 +2591,7 @@ a:active {
   max-width: 560px;
   background-color: #fff;
   border-radius: 5px;
+  box-shadow: #ddd 0 0 10px;
 }
 
 .search_form .item_title {
@@ -2693,4 +2707,48 @@ a:active {
 .categories_list figcaption {
   text-align: center;
   padding: 5px;
+}
+
+/*QUIZ GRID*/
+.quiz_grid {
+  padding: 50px 0 75px;
+}
+
+.quiz_grid .centre {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  max-width: 750px;
+}
+
+.quiz_grid-list {
+  display: grid;
+  grid-gap: 12px;
+}
+
+.quiz_grid-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  background-color: #dddddd;
+  border-radius: 5px;
+}
+
+.quiz_created_user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.quiz_created_user img {
+  display: block;
+  margin-right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+
+.quiz_description {
+  margin-bottom: 12px;
 }

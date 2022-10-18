@@ -9,6 +9,10 @@
     position: relative;
 }
 
+body.user_page .header_site {
+    border-bottom: 1px solid var(--border-color);
+}
+
 .header_logo {
     display: block;
     width: 125px;

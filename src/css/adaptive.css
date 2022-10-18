@@ -21,6 +21,7 @@
   }
 
   /*CATEGORIES QUIZ*/
+  /*QUIZ GRID*/
 }
 @media only screen and (min-width: 640px) {
   .popup.login_popup {
@@ -87,6 +88,11 @@
   /*CATEGORIES QUIZ*/
   .categories_list {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  /*QUIZ GRID*/
+  .quiz_grid-list {
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -199,6 +205,8 @@
   .categories_list {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  /*QUIZ GRID*/
 }
 @media only screen and (min-width: 1024px) {
   h1, .main_title {
@@ -292,6 +300,8 @@
   .categories_list {
     grid-template-columns: repeat(5, 1fr);
   }
+
+  /*QUIZ GRID*/
 }
 @media only screen and (min-width: 1280px) {
   /*HEADER SITE*/
@@ -304,4 +314,5 @@
   /*RESUL*/
   /*SEARCH QUIZ*/
   /*CATEGORIES QUIZ*/
+  /*QUIZ GRID*/
 }

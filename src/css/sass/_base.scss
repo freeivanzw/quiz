@@ -18,6 +18,10 @@ body {
     background-color: var(--site-bg);
 }
 
+body.user_page {
+    background-color: var(--site-bg-contrast);
+}
+
 body.overflow {
     overflow: hidden;
 }
@@ -310,6 +314,7 @@ a:active {
     background-color: var(--site-bg-contrast);
     padding: 20px;
     border-radius: 5px;
+    box-shadow: #ddd 0 0 10px;
 }
 
 .sub_text {

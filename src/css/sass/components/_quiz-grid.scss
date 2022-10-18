@@ -1,0 +1,44 @@
+/*QUIZ GRID*/
+
+.quiz_grid {
+    padding: 50px 0 75px;
+}
+
+.quiz_grid .centre {
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 750px;
+}
+
+.quiz_grid-list {
+    display: grid;
+    grid-gap: 12px;
+}
+
+.quiz_grid-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: #dddddd;
+    border-radius: 5px;
+}
+
+.quiz_created_user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.quiz_created_user img {
+    display: block;
+    margin-right: 12px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+}
+
+.quiz_description {
+    margin-bottom: 12px;
+}
